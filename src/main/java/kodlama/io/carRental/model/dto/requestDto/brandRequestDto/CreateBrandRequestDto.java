@@ -12,7 +12,6 @@ import javax.persistence.Column;
 public class CreateBrandRequestDto {
 
 
-    @Column(name = "brand_name")
     private String brandName;
 
 }

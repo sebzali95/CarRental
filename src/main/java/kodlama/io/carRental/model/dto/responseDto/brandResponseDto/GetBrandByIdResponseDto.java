@@ -13,6 +13,5 @@ public class GetBrandByIdResponseDto {
 
     private int id;
 
-    @Column(name = "brand_name")
     private String brandName;
 }

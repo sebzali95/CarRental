@@ -12,6 +12,5 @@ public class UpdateColorRequestDto {
 
     private int id;
 
-    @Column(name="color_name")
     private String colorName;
 }

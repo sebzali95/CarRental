@@ -9,6 +9,5 @@ import javax.persistence.Column;
 @Data
 public class CreateColorRequestDto {
 
-    @Column(name="color_name")
     private String colorName;
 }

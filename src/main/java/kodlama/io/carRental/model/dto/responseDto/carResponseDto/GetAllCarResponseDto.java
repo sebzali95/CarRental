@@ -1,10 +1,13 @@
 package kodlama.io.carRental.model.dto.responseDto.carResponseDto;
 
+import kodlama.io.carRental.model.dto.responseDto.brandResponseDto.GetAllBrandResponseDto;
+import kodlama.io.carRental.model.dto.responseDto.colorResponseDto.GetAllColorResponseDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -13,15 +16,11 @@ public class GetAllCarResponseDto {
 
     private int id;
 
-    @Column(name = "car_name")
     private String carName;
 
-    @Column(name = "model_year")
     private String modelYear;
 
-    @Column(name = "daily_price")
     private double dailyPrice;
 
-    @Column(name = "description")
     private String description;
 }

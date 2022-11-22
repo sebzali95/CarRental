@@ -1,4 +1,5 @@
 package kodlama.io.carRental.service.impl;
+
 import kodlama.io.carRental.model.dto.requestDto.carRequestDto.CreateCarRequestDto;
 import kodlama.io.carRental.model.dto.requestDto.carRequestDto.UpdateCarRequestDto;
 import kodlama.io.carRental.model.dto.responseDto.carResponseDto.GetAllCarResponseDto;
@@ -13,6 +14,7 @@ import kodlama.io.carRental.repository.ColorRepository;
 import kodlama.io.carRental.service.CarService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @Service
@@ -34,7 +36,7 @@ public class CarServiceImpl implements CarService {
     @Override
     public CreateCarRequestDto add(CreateCarRequestDto requestDto) {
         Car car = carMapper.toCreateCarDto(requestDto);
-        Color color = colorRepository.findById(requestDto.getColorId())
+        Color color = colorRepository.findById(requestDto.getBrandId())
                 .orElseThrow(() -> new RuntimeException("color id couldn't find by id :" + requestDto.getColorId()));
         Brand brand = brandRepository.findById(requestDto.getBrandId())
                 .orElseThrow(() -> new RuntimeException("brand id couldn't find by id :" + requestDto.getBrandId()));
